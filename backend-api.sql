@@ -7,7 +7,7 @@ create table users (
 
 create table tokens (
 	token varchar(64) not null primary key
-,	owner not null references users(userid)
+,	owner serial not null references users(userid)
 );
 
 create table endpoints (
